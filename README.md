@@ -32,10 +32,21 @@ in your user directory fires on every project, including ones where it is wrong.
 
 ## What is here
 
-| Plugin | Source | Version |
-|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | tracks `main` |
-| `mattpocock-skills` | `github.com/mattpocock/skills` | tracks upstream `main` |
+| Plugin | Source | Installed on | Version |
+|---|---|---|---|
+| `ignyte` | this repo, `./plugins/ignyte` | both | tracks `main` |
+| `mattpocock-skills` | `github.com/mattpocock/skills` | both | tracks upstream `main` |
+| `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
+
+`codex` is OpenAI's official plugin for driving Codex **from** Claude Code —
+`/codex:review` and `/codex:adversarial-review` for a second opinion from a different
+model, and `/codex:rescue`, `/codex:transfer`, `/codex:status`, `/codex:result`,
+`/codex:cancel` to delegate work and manage background jobs. Run `/codex:setup` once after
+installing.
+
+It is deliberately not installed into Codex CLI, which would point Codex at itself. It
+needs Node 18.18+ and a signed-in Codex — `install.ps1` provides both. Its usage counts
+against your Codex limits.
 
 **Everything tracks latest.** Both plugins follow their `main` branch, so you get skill
 authors' fixes as soon as they push them, without anyone here bumping a version.

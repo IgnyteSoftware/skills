@@ -14,6 +14,20 @@
       "source": "./plugins/ignyte"
     },
     {
+      "name": "codex",
+      "description": "OpenAI's official Codex plugin for Claude Code: /codex:review and /codex:adversarial-review for second-opinion reviews, and /codex:rescue, /codex:transfer, /codex:status, /codex:result, /codex:cancel to delegate work to Codex and manage background jobs. Claude Code only -- installing it into Codex would point Codex at itself.",
+      "author": {
+        "name": "OpenAI"
+      },
+      "homepage": "https://github.com/openai/codex-plugin-cc",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/openai/codex-plugin-cc.git",
+        "path": "plugins/codex",
+        "ref": "main"
+      }
+    },
+    {
       "name": "mattpocock-skills",
       "description": "Matt Pocock's agent skills: grilling, domain modelling, TDD, code review, research, and diagnosing bugs. Curated in by Ignyte, tracking upstream main.",
       "author": {

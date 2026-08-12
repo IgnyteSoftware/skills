@@ -1,0 +1,22 @@
+# Line endings, pinned rather than left to each machine.
+#
+# These trees are read by BOTH Windows git (core.autocrlf=true, checks out CRLF) and
+# WSL/Linux git (native = LF). `text=auto` alone resolves "native" per-platform, so the
+# same working tree looks clean to one git and shows every file modified to the other --
+# all false positives, with no content change. eol=crlf makes both agree.
+#
+# Repo content stays LF. Working tree is CRLF on every platform. Every repo under
+# IgnyteSoftware carries this policy; install.ps1 reports any that do not.
+* text=auto eol=crlf
+
+# PowerShell is only ever run on Windows. Explicit even though the blanket rule covers it.
+*.ps1  text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+
+# Shell scripts must stay LF or they fail to execute.
+*.sh   text eol=lf
+*.bash text eol=lf
+
+# Never commit a symlink into these repos. Git for Windows defaults core.symlinks=false,
+# which turns a committed symlink into a text file containing a path.

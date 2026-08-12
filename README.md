@@ -32,28 +32,26 @@ in your user directory fires on every project, including ones where it is wrong.
 
 ## What is here
 
-| Plugin | Source | Pinned |
+| Plugin | Source | Version |
 |---|---|---|
 | `ignyte-dev` | this repo, `./plugins/ignyte-dev` | tracks `main` |
-| `mattpocock-skills` | `github.com/mattpocock/skills` | commit `84fdeff` |
+| `mattpocock-skills` | `github.com/mattpocock/skills` | tracks upstream `main` |
 
-The two are pinned differently on purpose. **Our own skills track `main`** — we wrote
-them, we want fixes to reach everyone immediately, and a bad one is ours to fix.
-**Third-party skills are pinned to an exact commit**, because that is the case where a
-silent upstream change would alter four developers' agent behaviour one morning with no
-commit on our side to explain it.
+**Everything tracks latest.** Both plugins follow their `main` branch, so you get skill
+authors' fixes as soon as they push them, without anyone here bumping a version.
 
 Referencing rather than copying is deliberate: we do not redistribute Matt's work, and
-upstream fixes are one pin bump away. (Anthropic's own official marketplace references
-that same repo the same way, which is where the current pin comes from.)
+his changes reach you directly. (Anthropic's own official marketplace references the
+same repo the same way, though they pin it to a commit.)
 
-## Updating the third-party pin
-
-Deliberate, reviewed, and by pull request:
+The trade-off, stated so nobody is surprised by it: an upstream change can alter how
+everyone's agent behaves with no commit in this repo to explain it. If that ever causes
+a bad morning, the fix is to swap `"ref": "main"` for `"sha": "<commit>"` in
+`.claude-plugin/marketplace.json` — pinning is one line away, and the schema supports
+both. Until then, latest wins.
 
 ```bash
-git ls-remote https://github.com/mattpocock/skills.git HEAD   # or pick a tag
-# edit the sha in .claude-plugin/marketplace.json, open a PR
+git ls-remote https://github.com/mattpocock/skills.git main   # what you are currently getting
 ```
 
 ## Adding an Ignyte skill

@@ -15,7 +15,7 @@
     },
     {
       "name": "mattpocock-skills",
-      "description": "Matt Pocock's agent skills: grilling, domain modelling, TDD, code review, research, and diagnosing bugs. Curated in by Ignyte and pinned to a reviewed commit.",
+      "description": "Matt Pocock's agent skills: grilling, domain modelling, TDD, code review, research, and diagnosing bugs. Curated in by Ignyte, tracking upstream main.",
       "author": {
         "name": "Matt Pocock"
       },
@@ -23,7 +23,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/mattpocock/skills.git",
-        "sha": "84fdeffd12f2ee307994d1eb6feb48173b6e0502"
+        "ref": "main"
       }
     }
   ]

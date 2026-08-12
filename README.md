@@ -70,11 +70,11 @@ git ls-remote https://github.com/mattpocock/skills.git main   # what you are cur
 
 ```powershell
 claude plugin marketplace add IgnyteSoftware/skills
-claude plugin install ignyte@ignyte --scope user
-claude plugin install mattpocock-skills@ignyte --scope user
+claude plugin install ignyte@ignyte-software --scope user
+claude plugin install mattpocock-skills@ignyte-software --scope user
 
 codex plugin marketplace add IgnyteSoftware/skills
-codex plugin add ignyte@ignyte
+codex plugin add ignyte@ignyte-software
 ```
 
 Codex needs this run once per machine — unlike Claude Code, it cannot register a

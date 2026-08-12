@@ -1,0 +1,30 @@
+{
+  "name": "ignyte",
+  "description": "Ignyte Software developer skills for Claude Code and Codex CLI.",
+  "owner": {
+    "name": "Ignyte Software"
+  },
+  "plugins": [
+    {
+      "name": "ignyte-dev",
+      "description": "Ignyte's own development skills: conventions for CSLA, Blazor, WinForms hosting, SSDT database projects, and .NET Framework maintenance.",
+      "author": {
+        "name": "Ignyte Software"
+      },
+      "source": "./plugins/ignyte-dev"
+    },
+    {
+      "name": "mattpocock-skills",
+      "description": "Matt Pocock's agent skills: grilling, domain modelling, TDD, code review, research, and diagnosing bugs. Curated in by Ignyte and pinned to a reviewed commit.",
+      "author": {
+        "name": "Matt Pocock"
+      },
+      "homepage": "https://github.com/mattpocock/skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mattpocock/skills.git",
+        "sha": "84fdeffd12f2ee307994d1eb6feb48173b6e0502"
+      }
+    }
+  ]
+}

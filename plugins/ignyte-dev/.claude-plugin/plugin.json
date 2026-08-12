@@ -1,0 +1,8 @@
+{
+  "name": "ignyte-dev",
+  "description": "Ignyte's own development skills for Claude Code and Codex CLI.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Ignyte Software"
+  }
+}

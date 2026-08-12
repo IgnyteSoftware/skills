@@ -34,7 +34,7 @@ in your user directory fires on every project, including ones where it is wrong.
 
 | Plugin | Source | Version |
 |---|---|---|
-| `ignyte-dev` | this repo, `./plugins/ignyte-dev` | tracks `main` |
+| `ignyte` | this repo, `./plugins/ignyte` | tracks `main` |
 | `mattpocock-skills` | `github.com/mattpocock/skills` | tracks upstream `main` |
 
 **Everything tracks latest.** Both plugins follow their `main` branch, so you get skill
@@ -56,7 +56,7 @@ git ls-remote https://github.com/mattpocock/skills.git main   # what you are cur
 
 ## Adding an Ignyte skill
 
-1. `plugins/ignyte-dev/skills/<skill-name>/SKILL.md`
+1. `plugins/ignyte/skills/<skill-name>/SKILL.md`
 2. Frontmatter: stick to the `agentskills.io` spec fields — `name`, `description`,
    `license`, `compatibility`, `metadata`, `allowed-tools`. Non-spec fields are what
    break cross-CLI compatibility, and the whole point is one file serving both.
@@ -70,11 +70,11 @@ git ls-remote https://github.com/mattpocock/skills.git main   # what you are cur
 
 ```powershell
 claude plugin marketplace add IgnyteSoftware/skills
-claude plugin install ignyte-dev@ignyte --scope user
+claude plugin install ignyte@ignyte --scope user
 claude plugin install mattpocock-skills@ignyte --scope user
 
 codex plugin marketplace add IgnyteSoftware/skills
-codex plugin add ignyte-dev@ignyte
+codex plugin add ignyte@ignyte
 ```
 
 Codex needs this run once per machine — unlike Claude Code, it cannot register a

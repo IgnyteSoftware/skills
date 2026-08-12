@@ -6,12 +6,12 @@
   },
   "plugins": [
     {
-      "name": "ignyte-dev",
+      "name": "ignyte",
       "description": "Ignyte's own development skills: conventions for CSLA, Blazor, WinForms hosting, SSDT database projects, and .NET Framework maintenance.",
       "author": {
         "name": "Ignyte Software"
       },
-      "source": "./plugins/ignyte-dev"
+      "source": "./plugins/ignyte"
     },
     {
       "name": "mattpocock-skills",

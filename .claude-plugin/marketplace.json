@@ -7,7 +7,7 @@
   "plugins": [
     {
       "name": "ignyte",
-      "description": "Ignyte's own development skills: conventions for CSLA, Blazor, WinForms hosting, SSDT database projects, and .NET Framework maintenance.",
+      "description": "Ignyte's reviewed engineering and delivery workflows, vendored for consistent use across Claude Code and Codex CLI.",
       "author": {
         "name": "Ignyte Software"
       },
@@ -24,19 +24,6 @@
         "source": "git-subdir",
         "url": "https://github.com/openai/codex-plugin-cc.git",
         "path": "plugins/codex",
-        "ref": "main"
-      }
-    },
-    {
-      "name": "mattpocock-skills",
-      "description": "Matt Pocock's agent skills: grilling, domain modelling, TDD, code review, research, and diagnosing bugs. Curated in by Ignyte, tracking upstream main.",
-      "author": {
-        "name": "Matt Pocock"
-      },
-      "homepage": "https://github.com/mattpocock/skills",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/mattpocock/skills.git",
         "ref": "main"
       }
     }

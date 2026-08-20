@@ -27,14 +27,14 @@ Marketplace skills are cached separately (`~/.claude/plugins/cache/...`) and nam
 frontend and want three extra Blazor skills nobody else needs, put them in
 `~/.claude/skills` and they will coexist with everything here.
 
-If a skill would only ever make sense inside one repo, prefer the third layer — a skill
+If a skill would only ever make sense inside one repo, prefer the third layer. A skill
 in your user directory fires on every project, including ones where it is wrong.
 
 ## What is here
 
 | Plugin | Source | Installed on | Version |
 |---|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | both | 0.2.0 |
+| `ignyte` | this repo, `./plugins/ignyte` | both | 0.3.0 |
 | `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
 
 The `ignyte` plugin vendors one reviewed set instead of installing a second upstream
@@ -50,14 +50,14 @@ The remaining engineering skills are model-discoverable from narrow task descrip
 `verify-this`, and `writing-for-agents`. Pstack's `unslop` is the deliberate
 exception whose upstream description says it must always apply.
 
-`codex` is OpenAI's official plugin for driving Codex **from** Claude Code —
-`/codex:review` and `/codex:adversarial-review` for a second opinion from a different
+`codex` is OpenAI's official plugin for driving Codex **from** Claude Code.
+Use `/codex:review` and `/codex:adversarial-review` for a second opinion from a different
 model, and `/codex:rescue`, `/codex:transfer`, `/codex:status`, `/codex:result`,
 `/codex:cancel` to delegate work and manage background jobs. Run `/codex:setup` once after
 installing.
 
 It is deliberately not installed into Codex CLI, which would point Codex at itself. It
-needs Node 18.18+ and a signed-in Codex — `install.ps1` provides both. Its usage counts
+needs Node 18.18+ and a signed-in Codex. `install.ps1` provides both. Its usage counts
 against your Codex limits.
 
 Only the Claude-only `codex` integration tracks upstream `main`. Shared engineering
@@ -85,5 +85,5 @@ codex plugin marketplace add IgnyteSoftware/skills
 codex plugin add ignyte@ignyte-software
 ```
 
-Codex needs this run once per machine — unlike Claude Code, it cannot register a
+Codex needs this run once per machine. Unlike Claude Code, it cannot register a
 marketplace from repo-level config.

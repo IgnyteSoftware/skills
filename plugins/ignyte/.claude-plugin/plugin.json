@@ -1,7 +1,7 @@
 {
   "name": "ignyte",
-  "description": "Ignyte's own development skills for Claude Code and Codex CLI.",
-  "version": "0.1.0",
+  "description": "Ignyte's reviewed engineering and delivery workflows for Claude Code and Codex CLI.",
+  "version": "0.2.0",
   "author": {
     "name": "Ignyte Software"
   }

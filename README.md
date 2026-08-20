@@ -34,9 +34,21 @@ in your user directory fires on every project, including ones where it is wrong.
 
 | Plugin | Source | Installed on | Version |
 |---|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | both | tracks `main` |
-| `mattpocock-skills` | `github.com/mattpocock/skills` | both | tracks upstream `main` |
+| `ignyte` | this repo, `./plugins/ignyte` | both | 0.2.0 |
 | `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
+
+The `ignyte` plugin vendors one reviewed set instead of installing a second upstream
+skills plugin. Ignyte controls when those copies change; upstream attribution, reviewed
+revisions, and licenses are recorded in
+[`plugins/ignyte/THIRD_PARTY_NOTICES.md`](plugins/ignyte/THIRD_PARTY_NOTICES.md).
+
+Human-invoked workflows stay out of model context until a developer selects them:
+`code-review`, `grill-with-docs`, `grilling`, `implement`, `prototype`, `research`,
+`tdd`, `to-spec`, `to-tickets`, `triage`, and `wayfinder`.
+The remaining engineering skills are model-discoverable from narrow task descriptions:
+`codebase-design`, `diagnosing-bugs`, `domain-modeling`, `resolving-merge-conflicts`,
+`verify-this`, and `writing-for-agents`. Pstack's `unslop` is the deliberate
+exception whose upstream description says it must always apply.
 
 `codex` is OpenAI's official plugin for driving Codex **from** Claude Code —
 `/codex:review` and `/codex:adversarial-review` for a second opinion from a different
@@ -48,32 +60,18 @@ It is deliberately not installed into Codex CLI, which would point Codex at itse
 needs Node 18.18+ and a signed-in Codex — `install.ps1` provides both. Its usage counts
 against your Codex limits.
 
-**Everything tracks latest.** Both plugins follow their `main` branch, so you get skill
-authors' fixes as soon as they push them, without anyone here bumping a version.
-
-Referencing rather than copying is deliberate: we do not redistribute Matt's work, and
-his changes reach you directly. (Anthropic's own official marketplace references the
-same repo the same way, though they pin it to a commit.)
-
-The trade-off, stated so nobody is surprised by it: an upstream change can alter how
-everyone's agent behaves with no commit in this repo to explain it. If that ever causes
-a bad morning, the fix is to swap `"ref": "main"` for `"sha": "<commit>"` in
-`.claude-plugin/marketplace.json` — pinning is one line away, and the schema supports
-both. Until then, latest wins.
-
-```bash
-git ls-remote https://github.com/mattpocock/skills.git main   # what you are currently getting
-```
+Only the Claude-only `codex` integration tracks upstream `main`. Shared engineering
+skills change through reviewed commits in this repository.
 
 ## Adding an Ignyte skill
 
 1. `plugins/ignyte/skills/<skill-name>/SKILL.md`
-2. Frontmatter: stick to the `agentskills.io` spec fields — `name`, `description`,
-   `license`, `compatibility`, `metadata`, `allowed-tools`. Non-spec fields are what
-   break cross-CLI compatibility, and the whole point is one file serving both.
-3. Write `description` so an agent can tell when the skill applies. It is the only part
+2. Write `description` so an agent can tell when the skill applies. It is the only part
    loaded until the skill fires, so it is doing the routing.
-4. Open a pull request.
+3. For a human-invoked skill, set `disable-model-invocation: true` for Claude Code and
+   `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for Codex.
+4. Preserve source attribution and the applicable license when vendoring.
+5. Open a pull request.
 
 ## Manual install
 
@@ -82,7 +80,6 @@ git ls-remote https://github.com/mattpocock/skills.git main   # what you are cur
 ```powershell
 claude plugin marketplace add IgnyteSoftware/skills
 claude plugin install ignyte@ignyte-software --scope user
-claude plugin install mattpocock-skills@ignyte-software --scope user
 
 codex plugin marketplace add IgnyteSoftware/skills
 codex plugin add ignyte@ignyte-software

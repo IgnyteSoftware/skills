@@ -8,6 +8,7 @@ The Ignyte plugin vendors selected skills from the following reviewed revisions.
 | [pstack](https://github.com/cursor/plugins/tree/main/pstack) | `fd6dd6f7276956a532bb78a748a8d2818b6eb5f4` | `unslop` | MIT; see `licenses/pstack-MIT.txt` |
 | [Cursor Team Kit](https://github.com/cursor/plugins/tree/main/cursor-team-kit) | `fd6dd6f7276956a532bb78a748a8d2818b6eb5f4` | `verify-this` | MIT; see `licenses/cursor-team-kit-MIT.txt` |
 
-Ignyte made narrow integration edits to invocation policy, unvendored skill references,
-and cross-client verification tools and temporary paths. The original authors retain
-their copyrights.
+Ignyte made integration edits to invocation policy, unvendored skill references,
+cross-client verification tools, and temporary paths. Ignyte also made copy edits to
+reduce punctuation habits and sentence density. The original authors retain their
+copyrights.

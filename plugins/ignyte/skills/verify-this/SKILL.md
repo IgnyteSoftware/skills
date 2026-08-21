@@ -28,8 +28,8 @@ Do not use this for vague claims like "the code is cleaner". Ask for a measurabl
 ## Local Surfaces
 
 - Code behavior: focused unit/integration tests or a minimal repro script.
-- CLI/TUI behavior: the target agent's terminal tools, a terminal transcript, or a demo recording.
-- UI behavior: the target agent's browser or app-control tools, screenshots, accessibility snapshots, or browser traces.
+- CLI/TUI behavior: `control-cli`, terminal transcript, or demo recording.
+- UI behavior: `control-ui`, screenshots, accessibility snapshots, or browser traces.
 - API behavior: local HTTP/RPC request and response diff.
 - Performance: same-machine baseline/treatment timings or CPU profiles.
 - Memory: heap snapshots before and after the suspected operation.
@@ -39,7 +39,7 @@ Do not use this for vague claims like "the code is cleaner". Ask for a measurabl
 When safe to write artifacts:
 
 ```text
-<system-temp>/verify-this/<claim-slug>/
+/tmp/verify-this/<claim-slug>/
 ├── claim.md
 ├── timeline.md
 ├── baseline/
@@ -47,9 +47,6 @@ When safe to write artifacts:
 ├── diff/
 └── verdict.md
 ```
-
-Use `$env:TEMP\verify-this` on Windows and `${TMPDIR:-/tmp}/verify-this` on Unix-like
-systems. Keep the artifacts outside the repository unless the user asks to retain them.
 
 If artifacts may contain sensitive code, prompts, screenshots, HTTP bodies, or heap data, keep only the minimal inline evidence unless the user agrees to disk storage.
 

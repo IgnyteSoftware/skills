@@ -34,7 +34,7 @@ in your user directory fires on every project, including ones where it is wrong.
 
 | Plugin | Source | Installed on | Version |
 |---|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | both | 0.3.0 |
+| `ignyte` | this repo, `./plugins/ignyte` | both | 0.4.0 |
 | `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
 
 The `ignyte` plugin vendors one reviewed set instead of installing a second upstream
@@ -42,13 +42,13 @@ skills plugin. Ignyte controls when those copies change; upstream attribution, r
 revisions, and licenses are recorded in
 [`plugins/ignyte/THIRD_PARTY_NOTICES.md`](plugins/ignyte/THIRD_PARTY_NOTICES.md).
 
-Human-invoked workflows stay out of model context until a developer selects them:
-`code-review`, `grill-with-docs`, `grilling`, `implement`, `prototype`, `research`,
-`tdd`, `to-spec`, `to-tickets`, `triage`, and `wayfinder`.
-The remaining engineering skills are model-discoverable from narrow task descriptions:
-`codebase-design`, `diagnosing-bugs`, `domain-modeling`, `resolving-merge-conflicts`,
-`verify-this`, and `writing-for-agents`. Pstack's `unslop` is the deliberate
-exception whose upstream description says it must always apply.
+Invocation policy follows each upstream author verbatim. Human-invoked workflows stay
+out of model context until a developer selects them: `grill-with-docs`, `implement`,
+`to-spec`, `to-tickets`, `triage`, and `wayfinder`.
+The rest are model-discoverable from their descriptions: `code-review`,
+`codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grilling`, `prototype`,
+`research`, `resolving-merge-conflicts`, `tdd`, `verify-this`, and
+`writing-for-agents`. Pstack's `unslop` says it must always apply.
 
 `codex` is OpenAI's official plugin for driving Codex **from** Claude Code.
 Use `/codex:review` and `/codex:adversarial-review` for a second opinion from a different

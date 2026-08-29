@@ -34,7 +34,7 @@ in your user directory fires on every project, including ones where it is wrong.
 
 | Plugin | Source | Installed on | Version |
 |---|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | both | 0.5.0 |
+| `ignyte` | this repo, `./plugins/ignyte` | both | tracks latest commit |
 | `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
 
 The `ignyte` plugin vendors one reviewed set instead of installing a second upstream
@@ -61,8 +61,10 @@ It is deliberately not installed into Codex CLI, which would point Codex at itse
 needs Node 18.18+ and a signed-in Codex. `install.ps1` provides both. Its usage counts
 against your Codex limits.
 
-Only the Claude-only `codex` integration tracks upstream `main`. Shared engineering
-skills change through reviewed commits in this repository.
+Neither plugin pins a version. The `ignyte` plugin resolves to the latest reviewed
+commit in this repository, and the Claude-only `codex` integration tracks OpenAI's
+upstream `main`. `onboarding` turns on marketplace auto-update, so a merged change
+reaches developers on a later session without a release step.
 
 ## Adding an Ignyte skill
 

@@ -1,75 +1,17 @@
 ---
 name: to-spec
-description: Turn the current conversation into a spec and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
-disable-model-invocation: true
+description: Draft a specification from settled scope and decisions. Use for small agreed changes or as Wayfinder's drafting step; substantial discovery and interconnected specifications belong to Wayfinder.
+user-invocable: false
 ---
 
-This skill takes the current conversation context and codebase understanding and produces a spec. Do NOT interview the user — just synthesize what you already know.
+# To spec
 
-The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
+Use the conversation, current code, domain vocabulary, and relevant decisions. Preserve unresolved questions as such; use grilling only when a consequential decision blocks a useful specification.
 
-## Process
+State the problem, desired behavior, acceptance criteria, constraints, and exclusions. Include interfaces, examples, and verification expectations when they make the contract clearer. Scale detail to the change; do not force long user-story lists or invent testing scope.
 
-1. Explore the repo to understand the current state of the codebase, if you haven't already. Use the project's domain glossary vocabulary throughout the spec, and respect any ADRs in the area you're touching.
+For a substantial feature, check complete user workflows, domain states, permissions, integrations, and failure/recovery behavior. Trace acceptance back to requested outcomes and accepted decisions. Resolve contradictions across sections before handoff. Keep open decisions visible with their consequences; blocked sections and dependent tickets are not ready for implementation. Use [wayfinder](../wayfinder/SKILL.md) when discovery is still needed rather than inventing decisions to finish the document.
 
-2. Sketch out the seams at which you're going to test the feature. Existing seams should be preferred to new ones. Use the highest seam possible. If new seams are needed, propose them at the highest point you can. The fewer seams across the codebase, the better - the ideal number is one.
+Respect existing issue and document conventions. Use project-setup only for conventions that remain ambiguous after inspection. Draft locally or in the response unless publication is authorized; then publish to the agreed tracker and verify the result.
 
-Check with the user that these seams match their expectations.
-
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
-
-<spec-template>
-
-## Problem Statement
-
-The problem that the user is facing, from the user's perspective.
-
-## Solution
-
-The solution to the problem, from the user's perspective.
-
-## User Stories
-
-A LONG, numbered list of user stories. Each user story should be in the format of:
-
-1. As an <actor>, I want a <feature>, so that <benefit>
-
-<user-story-example>
-1. As a mobile bank customer, I want to see balance on my accounts, so that I can make better informed decisions about my spending
-</user-story-example>
-
-This list of user stories should be extremely extensive and cover all aspects of the feature.
-
-## Implementation Decisions
-
-A list of implementation decisions that were made. This can include:
-
-- The modules that will be built/modified
-- The interfaces of those modules that will be modified
-- Technical clarifications from the developer
-- Architectural decisions
-- Schema changes
-- API contracts
-- Specific interactions
-
-Do NOT include specific file paths or code snippets. They may end up being outdated very quickly.
-
-Exception: if a prototype produced a snippet that encodes a decision more precisely than prose can (state machine, reducer, schema, type shape), inline it within the relevant decision and note briefly that it came from a prototype. Trim to the decision-rich parts — not a working demo, just the important bits.
-
-## Testing Decisions
-
-A list of testing decisions that were made. Include:
-
-- A description of what makes a good test (only test external behavior, not implementation details)
-- Which modules will be tested
-- Prior art for the tests (i.e. similar types of tests in the codebase)
-
-## Out of Scope
-
-A description of the things that are out of scope for this spec.
-
-## Further Notes
-
-Any further notes about the feature.
-
-</spec-template>
+Done means an implementer can distinguish acceptable behavior from out-of-scope work. Return the spec and any open decisions, and continue with other outcomes the user requested.

@@ -1,0 +1,2 @@
+Settled: no customer login; no billing; coordinators assign technicians; technicians can see only their assignments; coordinators can see all appointments. Never silently overwrite concurrent edits. Human approval is required before release. Preserve stable appointment IDs on reschedule. Work intake is manual and repository hosting is Azure; do not assume GitHub or PRs.
+Open: may an emergency job displace a confirmed appointment? The business owner has not decided. Do not guess.

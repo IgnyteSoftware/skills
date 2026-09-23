@@ -1,0 +1,5 @@
+interface:
+  display_name: "Babysit"
+  short_description: "Follow PR checks and reviews to readiness"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Setup"
+  short_description: "Resolve existing project workflow conventions"
+policy:
+  allow_implicit_invocation: true

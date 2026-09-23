@@ -1,3 +1,5 @@
 interface:
   display_name: "Codebase Design"
-  short_description: "Vocabulary for deep-module design"
+  short_description: "Design interfaces and module responsibilities"
+policy:
+  allow_implicit_invocation: true

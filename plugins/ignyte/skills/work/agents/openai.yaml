@@ -1,0 +1,5 @@
+interface:
+  display_name: "Work"
+  short_description: "Coordinate goals across the Ignyte workflow"
+policy:
+  allow_implicit_invocation: true

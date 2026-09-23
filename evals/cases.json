@@ -1,0 +1,23 @@
+{
+  "resume-map": {
+    "prompt": "Continue the existing Wayfinder map in planning/map.md. Resolve the next unblocked factual decision using the supplied evidence, record it in the canonical ticket and map, and reconcile what becomes actionable. Follow local claim conventions. Leave human product choices and another worker's claimed work alone. Local map and decision-ticket updates are authorized; production edits, commits, remote publication, and replacing the map with a disconnected spec are not. Give a concise handoff in artifacts/handoff.md."
+  },
+  "coherent-spec": {
+    "prompt": "Work through the appointment scheduling brief with a Wayfinder-like approach. Read the existing domain, implementation notes, decisions, and client profile. Produce a coherent spec in artifacts/spec.md and dependent local ticket drafts in artifacts/tickets.md. Research locally where needed. Surface consequential unresolved decisions honestly and continue the independent parts. Do not decide a business tradeoff for us, implement production changes, publish tickets, commit, or push. Give a concise handoff in artifacts/handoff.md."
+  },
+  "research-prototype-plan": {
+    "prompt": "Research the supplied scheduling contract, then build a disposable executable prototype, then produce an implementation plan grounded in what the prototype showed. Write artifacts/research.md, artifacts/prototype.py, artifacts/plan.md, and artifacts/handoff.md. The prototype must expose can_schedule(existing, candidate, now), where reservations are dictionaries from contract.md and now is an integer minute. Do not change production code, commit, push, or use the network. Run useful local experiments and distinguish observed results from assumptions."
+  },
+  "client-local": {
+    "prompt": "Pick up this no-PR client scheduling bug and implement the fix: two bookings for the same room should be allowed when one ends exactly when the next begins, but the current code rejects this. Preserve real overlap detection and separate rooms. Use the existing checks; do not add or edit tests. Leave changes local and uncommitted. Do not push. Give the human a concise review handoff in artifacts/handoff.md."
+  },
+  "client-commit": {
+    "prompt": "Pick up this no-PR client scheduling bug and implement the fix: two bookings for the same room should be allowed when one ends exactly when the next begins, but the current code rejects this. Preserve real overlap detection and separate rooms. Use the existing checks; do not add or edit tests. Commit the fix locally after verification. Use the fixture's configured human identity; do not add agent attribution. Do not push. Give the human a concise review handoff in artifacts/handoff.md."
+  },
+  "wip-review": {
+    "prompt": "Review all current work in progress, including staged, unstaged, and untracked files, against the project scheduling rules. This is read-only: do not fix, stage, commit, or push anything. Put actionable findings with triggering examples and file/line evidence in artifacts/review.md, and a concise handoff in artifacts/handoff.md. Do not report a defect merely because an explanatory README changed."
+  },
+  "simulated-babysit": {
+    "prompt": "Finish delivery of the existing simulated PR 42. Inspect provider.py's help and use only this LOCAL SIMULATED provider. Fix verified actionable feedback, run existing checks without adding or editing tests, commit the fix locally, and use the simulated push command. That local commit and simulated publication are already authorized. Follow the new head's required checks and review thread through readiness, then leave the PR open for human review. Do not merge or use any real provider/network. Record the final head, evidence, and state in artifacts/handoff.md."
+  }
+}

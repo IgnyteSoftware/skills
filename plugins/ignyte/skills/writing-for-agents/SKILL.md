@@ -10,7 +10,7 @@ Include instructions that change decisions or prevent a demonstrated failure. Tr
 
 Make the description a precise context pointer: what the skill does and when it applies. State the outcome and the decisions that matter in the body. Give uncertain branches explicit triggers and finish conditions; avoid fixed rituals, repeated permission gates, and arbitrary counts.
 
-Keep each rule in one authoritative place. Group related guidance, and move substantial branch-specific material behind a link only when it earns a separate file. Prefer a small self-contained skill over a router for its own sake. Examples should resolve ambiguity, not repeat the rule.
+Keep each rule in one authoritative place. Group related guidance, and move substantial branch-specific material behind a link only when it earns a separate file. Prefer a small self-contained skill over a router for its own sake. Examples should resolve ambiguity, not repeat the rule. Keep shared skills independent of model versions; add model-specific guidance only for observed failures supported by evaluations. Short instructions must still preserve the task's detailed acceptance criteria and references.
 
 For Ignyte skills, keep a nonempty name and description, set user-invocable to false, and leave model invocation enabled. Set policy.allow_implicit_invocation to true in agents/openai.yaml. Claude Code supports the user-invocation restriction; do not claim Codex enforces an equivalent restriction.
 

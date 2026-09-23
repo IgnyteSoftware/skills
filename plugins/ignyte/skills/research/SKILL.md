@@ -6,7 +6,7 @@ user-invocable: false
 
 # Research
 
-Identify the decision or question the research must support. Inspect relevant local code and installed versions, then use primary documentation, specifications, or source code for external claims. Distinguish current behavior, documented behavior, and inference.
+Identify the decision or question the research must support. Inspect relevant local code and installed versions, then use primary documentation, specifications, or source code for external claims. Distinguish current behavior, documented behavior, and inference. Verify named products, models, versions, and other changing facts against current primary sources; familiarity is not evidence that a remembered fact still holds. State what could not be confirmed and where you looked.
 
 Follow conflicting or uncertain claims to evidence. Use a small experiment or prototype when reading cannot settle behavior. Delegate independent investigations when useful and available; delegation is not a prerequisite for answering.
 

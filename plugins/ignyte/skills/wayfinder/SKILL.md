@@ -6,9 +6,9 @@ user-invocable: false
 
 # Wayfinder
 
-Own the whole specification, not just its task list. Establish the users, desired outcomes, scope, client constraints, and requested stopping point. Inspect the current implementation and prior decisions. Identify interconnected choices and the uncertainties that block useful progress.
+Own the whole specification, not just its task list. Establish the users, desired outcomes, scope, client constraints, and requested stopping point. Inspect the current implementation and prior decisions. Identify interconnected choices and the uncertainties that block useful progress. For unfamiliar or substantial work, look for missing user journeys, unstated assumptions, and failure cases beyond the initial brief. Separate necessary discoveries from optional scope additions.
 
-Use [research](../research/SKILL.md) for facts, [prototype](../prototype/SKILL.md) for observable behavior, [grilling](../grilling/SKILL.md) for consequential user choices, and [domain-modeling](../domain-modeling/SKILL.md) for terms and rules. Answer discoverable questions from evidence before asking the user. Work through independent decisions while blocked choices remain open. Record decisions and their implications; when evidence changes one, update every affected part of the plan.
+Use [research](../research/SKILL.md) for facts, [prototype](../prototype/SKILL.md) for observable behavior, [grilling](../grilling/SKILL.md) for consequential user choices, and [domain-modeling](../domain-modeling/SKILL.md) for terms and rules. Use concrete references or disposable prototypes when preferences are easier to recognize than describe. Answer discoverable questions from evidence before asking the user. Work through independent decisions while blocked choices remain open. Record decisions and their implications; when evidence changes one, update every affected part of the plan.
 
 Keep technical inspection separate from human product decisions. Reuse behavior entailed by settled requirements instead of asking the user to approve it again. Attach each open question only to work it actually blocks; distinguish implementation prerequisites from later integration or release gates.
 

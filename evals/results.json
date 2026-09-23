@@ -1,0 +1,1344 @@
+{
+  "baseline_revision": "cb6d092",
+  "execution": "Fresh Codex agents; supplied skill catalog; offline fixtures",
+  "runs": [
+    {
+      "run": "baseline-coherent-spec",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "coherent-spec",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: spec.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: tickets.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "32762eb34e70f152b848077f9deac58b871ea2ffff6f9af2dccc4b5eaa643c66",
+          "words": 260
+        },
+        "spec.md": {
+          "sha256": "d44835db4736b697cce9bdbe12b1e7765b28d2056774fd33616df5c01b4d8aa9",
+          "words": 2039
+        },
+        "tickets.md": {
+          "sha256": "66efbd4e1359f6d3afc89401d956ad3f5278a85074d6a54459d7b6df0749e597",
+          "words": 2084
+        }
+      }
+    },
+    {
+      "run": "baseline-client-commit",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "client-commit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: 8f38003e",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: 8f38003e",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: 8f38003e",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "38d821ee5d334e294e8fb2cb35a36f35d936e25073c201714b484ba597625549",
+          "words": 104
+        }
+      }
+    },
+    {
+      "run": "baseline-client-local",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "client-local",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "ccb02c4a64107b7837beb05455415e6cbe95f13241c34ac141fa4a20a162ea7e",
+          "words": 98
+        }
+      }
+    },
+    {
+      "run": "baseline-research-prototype-plan",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "research-prototype-plan",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: research.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: prototype.py",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: plan.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "prototype satisfies executable contract",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "6fec524122f0ea035b9aea0da4e1e03a683c92a836768571b3c18f00afe9babf",
+          "words": 291
+        },
+        "plan.md": {
+          "sha256": "412242f80f22fe746fd2ee9e6a31a24a14f3fca6babfc608719258538c3ace36",
+          "words": 446
+        },
+        "prototype.py": {
+          "sha256": "73b11ffe242a886d1f6f7ea7251e053785cb6327bfd8c1dfbef4a30c19ca891e",
+          "words": 297
+        },
+        "research.md": {
+          "sha256": "300a2a9864f623629a85ab8d7db8f6399133c4a73a48e8b77c29127c48754544",
+          "words": 321
+        }
+      }
+    },
+    {
+      "run": "baseline-resume-map",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "resume-map",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map and factual ticket updated",
+            "passed": true
+          },
+          {
+            "requirement": "only authorized planning records changed",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/map.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/19.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/20.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/21.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/22.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map identity retained",
+            "passed": true
+          },
+          {
+            "requirement": "prior and factual decision links retained",
+            "passed": true
+          },
+          {
+            "requirement": "resolved fact indexed as a decision",
+            "passed": true
+          },
+          {
+            "requirement": "factual ticket closed and claimed",
+            "passed": true
+          },
+          {
+            "requirement": "human decision remains open",
+            "passed": true
+          },
+          {
+            "requirement": "prior decision and other owner's ticket preserved",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "4c5075496b365742fbf7f86ae9fba399b6dc5d4d462ae251aed7de84987a18dd",
+          "words": 149
+        }
+      }
+    },
+    {
+      "run": "baseline-simulated-babysit",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "simulated-babysit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: 3e00dfb5",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: 3e00dfb5",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: 3e00dfb5",
+            "passed": true
+          },
+          {
+            "requirement": "simulated publication produced a new current head",
+            "passed": true
+          },
+          {
+            "requirement": "new head checks passed",
+            "passed": true
+          },
+          {
+            "requirement": "thread replied to and resolved on latest published head",
+            "passed": true
+          },
+          {
+            "requirement": "final state inspected after thread operations",
+            "passed": true
+          },
+          {
+            "requirement": "actionable thread answered and resolved",
+            "passed": true
+          },
+          {
+            "requirement": "PR left open without merge action",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "548f48642cc83843dcaa0d628dd63d92d62a8d83f836a061909b3a25d27f5b5b",
+          "words": 222
+        }
+      }
+    },
+    {
+      "run": "baseline-wip-review",
+      "skill_snapshot_sha256": "fdc81bb0aaf9c416542a9b860afa2526670a51d0c53c14d1c1f9785026fb7e8d",
+      "structural_result": {
+        "case": "wip-review",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: review.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "4826b1d56f7e22c24585887c23aa857646aa8b3b6960e9cc1a14314e14b7283b",
+          "words": 130
+        },
+        "review.md": {
+          "sha256": "9d2c3731383cfac2ead2a27a67d21d9467d6adab5729b9d196cea3a31ef1dfcb",
+          "words": 420
+        }
+      }
+    },
+    {
+      "run": "candidate-coherent-spec",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "coherent-spec",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: spec.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: tickets.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "e8c95cee8ffb038266325fc65a463087fe36ede919ab36ff67127c3e737376e8",
+          "words": 255
+        },
+        "spec.md": {
+          "sha256": "6e426698653a73d498ae26f9528763487b70526df50da7f7280438b331ea1e5e",
+          "words": 2068
+        },
+        "tickets.md": {
+          "sha256": "e51915b678011bc001f9fa3dffe8965f9697cd1498288bbbb48372d6a0478cec",
+          "words": 1103
+        }
+      }
+    },
+    {
+      "run": "candidate-client-commit",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "client-commit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: e0379015",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: e0379015",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: e0379015",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "ab792874a7c6b256d8eb416f5e65f9fd5513a9a8d41add027a6c6dc04fe0c83a",
+          "words": 144
+        }
+      }
+    },
+    {
+      "run": "candidate-client-local",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "client-local",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "a55444dc227dde6257a44ca49742f8a20a3ac56dd8900eff4af52b2620f502dd",
+          "words": 113
+        }
+      }
+    },
+    {
+      "run": "candidate-research-prototype-plan",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "research-prototype-plan",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: research.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: prototype.py",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: plan.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "prototype satisfies executable contract",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "a8de563d3210e5c4855e567f9039213f3f4cf098106cc0e33c6c05bbda1f396d",
+          "words": 352
+        },
+        "plan.md": {
+          "sha256": "a52bc391fe5f806ba674dc358412ed27fdb5a78de7f37df52430de5056aef013",
+          "words": 605
+        },
+        "prototype.py": {
+          "sha256": "c261e6fc791d0ae2084f0dcbfd5b386d2a1591eda7fc155a44e922966791cdd1",
+          "words": 330
+        },
+        "research.md": {
+          "sha256": "5dc304667285fe29949f80ab1b76eb8be30b60ddb74955eca905ffcc3dfd0080",
+          "words": 354
+        }
+      }
+    },
+    {
+      "run": "candidate-resume-map",
+      "skill_snapshot_sha256": "0c1f39308e68c977497d47c390f57d0aed0cb3595225ef51df16cf6b6fec98e3",
+      "structural_result": {
+        "case": "resume-map",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map and factual ticket updated",
+            "passed": true
+          },
+          {
+            "requirement": "only authorized planning records changed",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/map.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/19.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/20.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/21.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/22.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map identity retained",
+            "passed": true
+          },
+          {
+            "requirement": "prior and factual decision links retained",
+            "passed": true
+          },
+          {
+            "requirement": "resolved fact indexed as a decision",
+            "passed": true
+          },
+          {
+            "requirement": "factual ticket closed and claimed",
+            "passed": true
+          },
+          {
+            "requirement": "human decision remains open",
+            "passed": true
+          },
+          {
+            "requirement": "prior decision and other owner's ticket preserved",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "c163c872b59ec23513b0846911169d45598f3846999982abdf442fc6c7fd3260",
+          "words": 168
+        }
+      }
+    },
+    {
+      "run": "candidate-simulated-babysit",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "simulated-babysit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: fe6578c8",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: fe6578c8",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: fe6578c8",
+            "passed": true
+          },
+          {
+            "requirement": "simulated publication produced a new current head",
+            "passed": true
+          },
+          {
+            "requirement": "new head checks passed",
+            "passed": true
+          },
+          {
+            "requirement": "thread replied to and resolved on latest published head",
+            "passed": true
+          },
+          {
+            "requirement": "final state inspected after thread operations",
+            "passed": true
+          },
+          {
+            "requirement": "actionable thread answered and resolved",
+            "passed": true
+          },
+          {
+            "requirement": "PR left open without merge action",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "eac7a035ea7e4cb845407c032494d5aa2a88ec2ccc9c9e4deb97f4baf7d3100d",
+          "words": 183
+        }
+      }
+    },
+    {
+      "run": "candidate-wip-review",
+      "skill_snapshot_sha256": "9c71f8b1aa766529f794a3ddbc87495b877e8a311a1452d85552db747e0da10b",
+      "structural_result": {
+        "case": "wip-review",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: review.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "c4acf1b1435a32979fb28c13690eb05f1c163576969f55ba2844bfefad9f3ff2",
+          "words": 122
+        },
+        "review.md": {
+          "sha256": "b863f048833368e9c98a1d3c0f8411ab25139dcfdc6631ed206b572f4440ca20",
+          "words": 347
+        }
+      }
+    },
+    {
+      "run": "final-coherent-spec-repeat",
+      "skill_snapshot_sha256": "fd75fb711b8046e9823f622819cc46b28cd630588ecdb3b183112ca956dfdb08",
+      "structural_result": {
+        "case": "coherent-spec",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: spec.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: tickets.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "4a763bd54b6b1a0389ebe8dbcd1dd9ca19ccefb79f65d7d3937b39e33f693309",
+          "words": 200
+        },
+        "spec.md": {
+          "sha256": "53f51af292e80dc0fa50269b6dd5297e0d0fa5c519d6beceb1763a0f9f07aef6",
+          "words": 1606
+        },
+        "tickets.md": {
+          "sha256": "ced3355f77fefa90b17c5d258bf9a67214c2177f6002bfaddef34f8ec96e84a2",
+          "words": 747
+        }
+      }
+    },
+    {
+      "run": "publish-client-commit",
+      "skill_snapshot_sha256": "97d74f1bdb8b329b7a7a569e72c82e5c201216a3dca2e0de0256919eb21a5c2c",
+      "structural_result": {
+        "case": "client-commit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: e8f07414",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: e8f07414",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: e8f07414",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "3bfbf3887a319b59fd33dc17671eedba189f4f260af2f1e88691865bb927694a",
+          "words": 100
+        }
+      }
+    },
+    {
+      "run": "publish-simulated-babysit",
+      "skill_snapshot_sha256": "97d74f1bdb8b329b7a7a569e72c82e5c201216a3dca2e0de0256919eb21a5c2c",
+      "structural_result": {
+        "case": "simulated-babysit",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "only scheduling implementation changed",
+            "passed": true
+          },
+          {
+            "requirement": "existing scheduling behavior checks pass",
+            "passed": true
+          },
+          {
+            "requirement": "commit boundary respected",
+            "passed": true
+          },
+          {
+            "requirement": "fix is committed",
+            "passed": true
+          },
+          {
+            "requirement": "original fixture commit remains an ancestor",
+            "passed": true
+          },
+          {
+            "requirement": "committed tree changes only scheduling implementation",
+            "passed": true
+          },
+          {
+            "requirement": "new commit history exists",
+            "passed": true
+          },
+          {
+            "requirement": "commit changes only scheduler: dc86b021",
+            "passed": true
+          },
+          {
+            "requirement": "human author and committer: dc86b021",
+            "passed": true
+          },
+          {
+            "requirement": "no attribution trailers: dc86b021",
+            "passed": true
+          },
+          {
+            "requirement": "simulated publication produced a new current head",
+            "passed": true
+          },
+          {
+            "requirement": "new head checks passed",
+            "passed": true
+          },
+          {
+            "requirement": "thread replied to and resolved on latest published head",
+            "passed": true
+          },
+          {
+            "requirement": "final state inspected after thread operations",
+            "passed": true
+          },
+          {
+            "requirement": "actionable thread answered and resolved",
+            "passed": true
+          },
+          {
+            "requirement": "PR left open without merge action",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "91d3a1e09c54ebcdb5385f81e9fc54a87687cece327811e31427ccf1f7025030",
+          "words": 240
+        }
+      }
+    },
+    {
+      "run": "reviewed-coherent-spec",
+      "skill_snapshot_sha256": "19e9922eafc2e85e0dfae11f96f09a0d782c61bd0b865f4bcd80771d4b7fe411",
+      "structural_result": {
+        "case": "coherent-spec",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: spec.md",
+            "passed": true
+          },
+          {
+            "requirement": "requested artifact exists: tickets.md",
+            "passed": true
+          },
+          {
+            "requirement": "source and task files unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "5834d641c3918552745bd3b052d74bcdacf1e0bf471c9874e0668b1725e7dd0b",
+          "words": 279
+        },
+        "spec.md": {
+          "sha256": "c72b3fa6a6a233085f54c3726ece094a6e2dc04ac93f266d2c7a8ac673948467",
+          "words": 2151
+        },
+        "tickets.md": {
+          "sha256": "e1afa84da15decb871df571788b88046baac2656fb97277539b9f5550a538106",
+          "words": 1288
+        }
+      }
+    },
+    {
+      "run": "reviewed-resume-map",
+      "skill_snapshot_sha256": "19e9922eafc2e85e0dfae11f96f09a0d782c61bd0b865f4bcd80771d4b7fe411",
+      "structural_result": {
+        "case": "resume-map",
+        "structural_passed": true,
+        "verdict": "pending-semantic-review",
+        "skills_installed": true,
+        "checks": [
+          {
+            "requirement": "no Git remote configured",
+            "passed": true
+          },
+          {
+            "requirement": "existing checks unchanged",
+            "passed": true
+          },
+          {
+            "requirement": "human handoff exists",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map and factual ticket updated",
+            "passed": true
+          },
+          {
+            "requirement": "only authorized planning records changed",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/map.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/19.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/20.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/21.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical planning record exists: planning/tickets/22.md",
+            "passed": true
+          },
+          {
+            "requirement": "canonical map identity retained",
+            "passed": true
+          },
+          {
+            "requirement": "prior and factual decision links retained",
+            "passed": true
+          },
+          {
+            "requirement": "resolved fact indexed as a decision",
+            "passed": true
+          },
+          {
+            "requirement": "factual ticket closed and claimed",
+            "passed": true
+          },
+          {
+            "requirement": "human decision remains open",
+            "passed": true
+          },
+          {
+            "requirement": "prior decision and other owner's ticket preserved",
+            "passed": true
+          },
+          {
+            "requirement": "no commit created",
+            "passed": true
+          },
+          {
+            "requirement": "Git index unchanged",
+            "passed": true
+          }
+        ],
+        "semantic_review_required": true
+      },
+      "artifacts": {
+        "handoff.md": {
+          "sha256": "0148af6504da8d2c74e7902debaff4b9f67cb3469f5a4f84052592d1ba0bbcfe",
+          "words": 174
+        }
+      }
+    }
+  ],
+  "semantic_review": "Independent blind paired artifact assessment; essential outcomes pass with planning/handoff caveats. See REPORT.md."
+}

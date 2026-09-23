@@ -1,84 +1,109 @@
-# Ignyte Skills
+# Ignyte skills
 
-Shared agent skills for Ignyte developers, delivered as a **plugin marketplace** that
-both **Claude Code** and **Codex CLI** read from the same manifest.
+A shared engineering workflow for plain-English requests, installed on Claude Code
+and Codex by [Ignyte onboarding](https://github.com/IgnyteSoftware/onboarding).
 
-Installed by [`IgnyteSoftware/onboarding`](https://github.com/IgnyteSoftware/onboarding).
-You do not need to clone this repo to use it.
+## Start with the outcome
 
-## Why this is a separate repo
+Describe the work: "research and prototype this," "plan the migration," or "fix
+this issue, review it, and open a PR." The `work` skill selects the needed skills,
+keeps every requested outcome, and reassesses after each result. Explicit ordering
+and stopping points remain part of the task. A plan or prototype alone does not
+start production implementation.
 
-Skills change far more often than setup scripts do. Keeping them here means a new skill
-reaches everyone without touching the installer, and a developer can contribute one by
-pull request without going near PowerShell.
+`wayfinder` owns substantial discovery and specification work. It coordinates
+research, focused questions, prototypes, and domain decisions, then checks the
+specification as a whole before breaking it into implementable work. All 18
+specialists remain installed; the four-skill consolidation was a research option,
+not the selected package.
 
-## Three layers of skills
+This is agentic routing, not a workflow engine. Tests, CI, permissions, and
+repository controls provide enforcement. No skill guarantees identical model
+behavior on every run. See [the mockup and validation](docs/skill-routing-mockup.md).
+The [paired workflow evaluation](evals/REPORT.md) records the later 19 local task
+executions, sample specifications, review fixes, and rollout limits.
 
-Only the first layer lives here.
+## Invocation and delivery
 
-| Layer | Where | Who owns it |
+All 18 skills allow agent invocation. Claude Code uses `user-invocable: false`;
+Codex uses `policy.allow_implicit_invocation: true`. No skill disables model
+invocation. Claude Code hides direct user invocation; Codex has no documented
+equivalent restriction, so explicit selection remains available there.
+
+One normal entry point does not mean only one installed skill or one loaded
+description. Specialists remain discoverable and can be used directly by agents.
+Bodies are loaded as needed. Onboarding's shared instructions point to `ignyte:work`.
+
+`babysit` is promoted from Hounddog. It distinguishes one PR status check from
+sustained delivery, follows current-head checks and reviews, and leaves a ready PR
+open unless the task authorizes merging. A local mockup is not a deployment.
+Publish the shared package and onboarding change before removing Hounddog's local
+copy. Existing sessions may need to restart to discover the new skills.
+
+Delivery follows repository and client rules. A no-PR workflow can finish with
+verified local changes or an authorized local commit for human review. Commit
+permission does not authorize pushing. The host, tracker, source-control type,
+and review policy are resolved separately; Azure hosting does not imply PRs.
+
+## Every skill
+
+Original authors retain their copyrights; Ignyte maintains the adaptations.
+Full provenance and licenses are in
+[third-party notices](plugins/ignyte/THIRD_PARTY_NOTICES.md).
+
+| Skill | Original author / source | Purpose |
 |---|---|---|
-| **Shared** | this repo, via the marketplace | the team, reviewed by PR |
-| **Personal** | `~/.claude/skills`, `~/.agents/skills` | you, never touched by setup |
-| **Repo-specific** | `.claude/skills` or `.agents/skills` in a project | committed with that project |
+| [work](plugins/ignyte/skills/work/SKILL.md) | Ignyte Software | Select and combine actions; track outcomes and stopping points. |
+| [babysit](plugins/ignyte/skills/babysit/SKILL.md) | Ignyte Software / Hounddog | Inspect PR status or follow checks and reviews through readiness. |
+| [wayfinder](plugins/ignyte/skills/wayfinder/SKILL.md) | Matt Pocock | Resolve planning decisions and sequence milestones and work. |
+| [grilling](plugins/ignyte/skills/grilling/SKILL.md) | Matt Pocock | Ask focused questions about consequential product decisions. |
+| [research](plugins/ignyte/skills/research/SKILL.md) | Matt Pocock | Establish facts from primary sources and experiments. |
+| [prototype](plugins/ignyte/skills/prototype/SKILL.md) | Matt Pocock | Build disposable artifacts to settle design or behavior questions. |
+| [to-spec](plugins/ignyte/skills/to-spec/SKILL.md) | Matt Pocock | Capture accepted scope and observable acceptance criteria. |
+| [to-tickets](plugins/ignyte/skills/to-tickets/SKILL.md) | Matt Pocock | Break work into verifiable issues with dependencies. |
+| [triage](plugins/ignyte/skills/triage/SKILL.md) | Matt Pocock | Assess intake and prepare actionable work. |
+| [project-setup](plugins/ignyte/skills/project-setup/SKILL.md) | Matt Pocock, adapted from setup-matt-pocock-skills | Resolve existing tracker, label, and documentation conventions. |
+| [diagnosing-bugs](plugins/ignyte/skills/diagnosing-bugs/SKILL.md) | Matt Pocock | Reproduce, diagnose, and verify focused fixes. |
+| [tdd](plugins/ignyte/skills/tdd/SKILL.md) | Matt Pocock | Run a red-green loop when test-first work is requested. |
+| [code-review](plugins/ignyte/skills/code-review/SKILL.md) | Matt Pocock | Review the actual change against standards and accepted intent. |
+| [codebase-design](plugins/ignyte/skills/codebase-design/SKILL.md) | Matt Pocock | Compare interfaces, responsibilities, and test seams. |
+| [improve-codebase-architecture](plugins/ignyte/skills/improve-codebase-architecture/SKILL.md) | Matt Pocock | Assess structural improvements and their tradeoffs. |
+| [domain-modeling](plugins/ignyte/skills/domain-modeling/SKILL.md) | Matt Pocock | Clarify terminology and record durable decisions. |
+| [writing-for-agents](plugins/ignyte/skills/writing-for-agents/SKILL.md) | Matt Pocock | Write compact instructions with clear triggers and outcomes. |
+| [unslop](plugins/ignyte/skills/unslop/SKILL.md) | Lauren Tan / PStack | Edit prose for clarity, concrete meaning, and human voice. |
 
-Marketplace skills are cached separately (`~/.claude/plugins/cache/...`) and namespaced
-`plugin:skill`, so **they never collide with your own**. If you spend your time on the
-frontend and want three extra Blazor skills nobody else needs, put them in
-`~/.claude/skills` and they will coexist with everything here.
+The `implement` and `grill-with-docs` wrappers are folded into `work` routing.
+`project-setup` replaces `setup-matt-pocock-skills` and still reads existing project
+configuration. Redundant templates and recipes were removed after their useful
+constraints were included in the compact skills.
 
-If a skill would only ever make sense inside one repo, prefer the third layer. A skill
-in your user directory fires on every project, including ones where it is wrong.
+## Packages and ownership
 
-## What is here
+| Plugin | Source | Installed on |
+|---|---|---|
+| `ignyte` | `./plugins/ignyte` in this repository | Claude Code and Codex |
+| `codex` | `openai/codex-plugin-cc`, upstream `main` | Claude Code only |
 
-| Plugin | Source | Installed on | Version |
-|---|---|---|---|
-| `ignyte` | this repo, `./plugins/ignyte` | both | tracks latest commit |
-| `codex` | `github.com/openai/codex-plugin-cc` | Claude Code only | tracks upstream `main` |
+The separate `codex` plugin drives Codex from Claude Code. Its own skills are
+upstream-managed; this invocation policy applies to Ignyte's package. Personal and
+repository-specific skills remain independently owned.
 
-The `ignyte` plugin vendors one reviewed set instead of installing a second upstream
-skills plugin. Ignyte controls when those copies change; upstream attribution, reviewed
-revisions, and licenses are recorded in
-[`plugins/ignyte/THIRD_PARTY_NOTICES.md`](plugins/ignyte/THIRD_PARTY_NOTICES.md).
+Neither plugin pins a version. The Ignyte marketplace follows reviewed commits;
+onboarding configures updates. Changes become available after publication and a
+successful client refresh, not merely when this checkout changes.
 
-Invocation policy follows each upstream author verbatim. Human-invoked workflows stay
-out of model context until a developer selects them: `grill-with-docs`, `implement`,
-`improve-codebase-architecture`, `setup-matt-pocock-skills`, `to-spec`, `to-tickets`,
-`triage`, and `wayfinder`.
-The rest are model-discoverable from their descriptions: `code-review`,
-`codebase-design`, `diagnosing-bugs`, `domain-modeling`, `grilling`, `prototype`,
-`research`, `tdd`, and `writing-for-agents`. Pstack's `unslop` says it must always
-apply.
+## Maintaining a skill
 
-`codex` is OpenAI's official plugin for driving Codex **from** Claude Code.
-Use `/codex:review` and `/codex:adversarial-review` for a second opinion from a different
-model, and `/codex:rescue`, `/codex:transfer`, `/codex:status`, `/codex:result`,
-`/codex:cancel` to delegate work and manage background jobs. Run `/codex:setup` once after
-installing.
+Use `writing-for-agents`. Keep the description precise, the body focused on useful
+decisions, and completion observable. Preserve user scope and existing authority.
+Set `user-invocable: false` and `policy.allow_implicit_invocation: true`; leave
+`disable-model-invocation` absent or false. Keep links and provenance current.
+Evaluate combined outcomes, steering, and stopping points before changing routing.
+Open a PR for publication under the repository's review rules.
 
-It is deliberately not installed into Codex CLI, which would point Codex at itself. It
-needs Node 18.18+ and a signed-in Codex. `install.ps1` provides both. Its usage counts
-against your Codex limits.
+## Manual installation
 
-Neither plugin pins a version. The `ignyte` plugin resolves to the latest reviewed
-commit in this repository, and the Claude-only `codex` integration tracks OpenAI's
-upstream `main`. `onboarding` turns on marketplace auto-update, so a merged change
-reaches developers on a later session without a release step.
-
-## Adding an Ignyte skill
-
-1. `plugins/ignyte/skills/<skill-name>/SKILL.md`
-2. Write `description` so an agent can tell when the skill applies. It is the only part
-   loaded until the skill fires, so it is doing the routing.
-3. For a human-invoked skill, set `disable-model-invocation: true` for Claude Code and
-   `policy.allow_implicit_invocation: false` in `agents/openai.yaml` for Codex.
-4. Preserve source attribution and the applicable license when vendoring.
-5. Open a pull request.
-
-## Manual install
-
-`onboarding`'s `install.ps1` does this for you.
+Onboarding runs these commands for each machine:
 
 ```powershell
 claude plugin marketplace add IgnyteSoftware/skills
@@ -88,5 +113,4 @@ codex plugin marketplace add IgnyteSoftware/skills
 codex plugin add ignyte@ignyte-software
 ```
 
-Codex needs this run once per machine. Unlike Claude Code, it cannot register a
-marketplace from repo-level config.
+For an already registered marketplace, refresh it instead of blindly re-adding it.

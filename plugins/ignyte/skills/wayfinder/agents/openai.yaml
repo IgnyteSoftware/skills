@@ -1,5 +1,5 @@
 interface:
   display_name: "Wayfinder"
-  short_description: "Map a large effort as decision tickets"
+  short_description: "Resolve decisions into coherent specs and plans"
 policy:
-  allow_implicit_invocation: false
+  allow_implicit_invocation: true

@@ -1,0 +1,2 @@
+# Appointment scheduling
+Operations coordinators schedule a technician visit for a customer. Technicians see their assigned visits and record arrival and completion. Coordinators need cancellation and rescheduling, and must not double-book a technician. Emergency jobs matter, but we have not decided whether they may displace confirmed appointments. Work out the complete behavior, not just the happy-path screens.

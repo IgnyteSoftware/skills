@@ -1,12 +1,15 @@
 ---
 name: research
-description: Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
+description: Investigate technical questions against primary sources and local evidence. Use when a decision needs facts beyond the current context, including research combined with planning or prototypes.
+user-invocable: false
 ---
 
-Spin up a **background agent** to do the research, so you keep working while it reads.
+# Research
 
-Its job:
+Identify the decision or question the research must support. Inspect relevant local code and installed versions, then use primary documentation, specifications, or source code for external claims. Distinguish current behavior, documented behavior, and inference.
 
-1. Investigate the question against **primary sources** — official docs, source code, specs, first-party APIs — not a secondary write-up of them. Follow every claim back to the source that owns it.
-2. Write the findings to a single Markdown file, citing each claim's source.
-3. Save it where the repo already keeps such notes; match the existing convention, and if there is none, put it somewhere sensible and say where.
+Follow conflicting or uncertain claims to evidence. Use a small experiment or prototype when reading cannot settle behavior. Delegate independent investigations when useful and available; delegation is not a prerequisite for answering.
+
+Separate facts from user choices. Use [grilling](../grilling/SKILL.md) when a consequential preference or constraint cannot be inferred from accepted decisions. Use [prototype](../prototype/SKILL.md) to test uncertain behavior. For requested planning or a coherent specification, feed findings into [wayfinder](../wayfinder/SKILL.md); research alone stops with findings rather than starting implementation.
+
+Return a concise answer with supporting sources, remaining uncertainty, and implications for the requested work. Write a durable research file within the task's authorized scope and location; read-only requests can receive findings in the response. Continue into other requested outcomes instead of treating research as the whole task.
